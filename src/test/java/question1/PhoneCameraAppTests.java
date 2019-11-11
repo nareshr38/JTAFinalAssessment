@@ -3,7 +3,6 @@ package com.jtafinalassessment.code.question1;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class PhoneCameraAppTests {
