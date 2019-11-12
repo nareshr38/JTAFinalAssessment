@@ -3,7 +3,7 @@ package com.jtafinalassessment.code.question3;
 public class Level {
     private ParkingSpot[] parkingSpots;
     private int availableSpots = 0;
-    private static final int spotPerRow = 10;
+    private static final int SPOT_PER_ROW = 10;
 
     public Level(int numberSpots) {
         availableSpots = numberSpots;
@@ -20,7 +20,7 @@ public class Level {
             } else if (count < largeSpots + compactSpots) {
                 size = VehicleSize.CARSIZE;
             }
-            int row = count / spotPerRow;
+            int row = count / SPOT_PER_ROW;
             parkingSpots[count] = new ParkingSpot(this, row, count, size);
         }
     }
