@@ -8,7 +8,8 @@ public class MotorCycle extends Vehicle {
 
     @Override
     public boolean canFitInSpot(ParkingSpot spot) {
-        return spot.getSizeOfVehicle() == VehicleSize.MOTORCYCLE || spot.getSizeOfVehicle() == VehicleSize.CARSIZE || spot.getSizeOfVehicle() == VehicleSize.LARGE;
+        return spot.getSizeOfVehicle() == VehicleSize.MOTORCYCLE|| spot.getSizeOfVehicle() == VehicleSize.CARSIZE
+                || spot.getSizeOfVehicle() == VehicleSize.LARGE;
     }
 
 }

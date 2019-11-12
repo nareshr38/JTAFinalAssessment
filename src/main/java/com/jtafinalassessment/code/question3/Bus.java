@@ -10,6 +10,7 @@ public class Bus extends Vehicle {
 
     @Override
     public boolean canFitInSpot(ParkingSpot spot) {
+
         return spot.getSizeOfVehicle() == VehicleSize.LARGE;
     }
 
