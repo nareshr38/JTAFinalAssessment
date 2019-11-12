@@ -2,12 +2,12 @@ package com.jtafinalassessment.code.question3;
 
 public class ParkingLot {
     private Level[] levels;
-    private final int numberOfLevels = 2;
+    private static final int NUMBEROFLEVELS = 2;
 
     public ParkingLot() {
-        levels = new Level[numberOfLevels];
-        for (int count = 0; count < numberOfLevels; count++) {
-            levels[count] = new Level(count, 20);
+        levels = new Level[NUMBEROFLEVELS];
+        for (int count = 0; count < NUMBEROFLEVELS; count++) {
+            levels[count] = new Level(20);
         }
     }
 
@@ -22,7 +22,7 @@ public class ParkingLot {
 
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        for (int count = 0; count < numberOfLevels; count++) {
+        for (int count = 0; count < NUMBEROFLEVELS; count++) {
             sb.append("Level " + count + ": " + levels[count] + "\n");
         }
         return sb.toString();

@@ -4,13 +4,13 @@ public class Bus extends Vehicle {
 
     public Bus(){
         spotsNeeded = 5;
-        size = VehicleSize.Large;
+        size = VehicleSize.LARGE;
 
     }
 
     @Override
     public boolean canFitInSpot(ParkingSpot spot) {
-        return spot.getSizeOfVehicle() == VehicleSize.Large;
+        return spot.getSizeOfVehicle() == VehicleSize.LARGE;
     }
 
 }

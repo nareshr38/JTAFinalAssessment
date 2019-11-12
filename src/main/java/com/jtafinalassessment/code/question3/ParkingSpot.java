@@ -56,17 +56,17 @@ public class ParkingSpot {
         StringBuilder stringBuilder = new StringBuilder();
 
         if(!isAvailable()){
-            if(vehicle.getSize() == VehicleSize.Large){
+            if(vehicle.getSize() == VehicleSize.LARGE){
                 stringBuilder.append('B');
-            } else if (vehicle.getSize() == VehicleSize.CarSize){
+            } else if (vehicle.getSize() == VehicleSize.CARSIZE){
                 stringBuilder.append('C');
             } else {
                 stringBuilder.append('M');
             }
         } else {
-            if(sizeOfVehicle == VehicleSize.Large){
+            if(sizeOfVehicle == VehicleSize.LARGE){
                 stringBuilder.append('_');
-            } else if (sizeOfVehicle == VehicleSize.CarSize){
+            } else if (sizeOfVehicle == VehicleSize.CARSIZE){
                 stringBuilder.append('.');
             } else {
                 stringBuilder.append(',');

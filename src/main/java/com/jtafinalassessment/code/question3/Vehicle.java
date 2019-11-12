@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public abstract  class Vehicle {
     protected int spotsNeeded;
-    protected ArrayList<ParkingSpot> parkingSpots = new ArrayList<ParkingSpot>();
+    protected ArrayList<ParkingSpot> parkingSpots = new ArrayList<>();
     protected VehicleSize size;
     protected String registrationNo;
 

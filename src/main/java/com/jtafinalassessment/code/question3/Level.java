@@ -1,12 +1,11 @@
 package com.jtafinalassessment.code.question3;
 
 public class Level {
-    private int floor;
     private ParkingSpot[] parkingSpots;
     private int availableSpots = 0;
     private static final int spotPerRow = 10;
 
-    public Level(int floor, int numberSpots) {
+    public Level(int numberSpots) {
         availableSpots = numberSpots;
         parkingSpots = new ParkingSpot[numberSpots];
 
@@ -15,11 +14,11 @@ public class Level {
         int compactSpots = numberSpots - largeSpots - bikeSpots;
 
         for (int count = 0; count < numberSpots; count++) {
-            VehicleSize size = VehicleSize.Motorcycle;
+            VehicleSize size = VehicleSize.MOTORCYCLE;
             if (count < largeSpots) {
-                size = VehicleSize.Large;
+                size = VehicleSize.LARGE;
             } else if (count < largeSpots + compactSpots) {
-                size = VehicleSize.CarSize;
+                size = VehicleSize.CARSIZE;
             }
             int row = count / spotPerRow;
             parkingSpots[count] = new ParkingSpot(this, row, count, size);
@@ -57,7 +56,6 @@ public class Level {
         int sportMediumOne = 0;
 
         for (int index = 0; index < parkingSpots.length; index++) {
-            ParkingSpot spot = parkingSpots[index];
 
             if (lastRow != parkingSpots[index].getRow()) {
                 spotsFound = 0;
